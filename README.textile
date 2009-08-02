@@ -1,13 +1,35 @@
-ProvinceSelect
-==============
+h1. Province Select
 
-Introduction goes here.
+Simple plugin to select a list of Indonesian provinces.
+This plugin can be integrated with "Formtastic":http://github.com/justinfrench/formtastic/ easily.
 
+h2. Example
 
-Example
-=======
+you can use @province_select@ like:
 
-Example goes here.
+<pre>
+  <%- form_for(@address) do |f| -%>
+    <p>
+      <%= f.label :province %><br />
+      <%= province_select "address", "province" %>
+    </p>
+    <p>
+      <%= f.submit 'Create' %>
+    </p>
+  <%- end -%>
+</pre>
 
+h2. Formtastic Integration
+
+If you're using "formtastic":http://github.com/justinfrench/formtastic/ you can just simply write:
+
+<pre>
+  <%- semantic_form_for(@address) do |f| -%>
+    <%= f.inputs :province %>
+    <%= f.buttons :commit %>
+  <%- end -%>
+</pre>
+
+And it'll just work.
 
 Copyright (c) 2009 Nugroho Herucahyono, released under the MIT license

@@ -1,5 +1,2 @@
 require 'province_select'
-
-if defined? Formtastic
-  require 'province_formtastic'
-end
+require 'province_formtastic' if defined? Formtastic
