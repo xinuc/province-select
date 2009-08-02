@@ -1,16 +1,17 @@
 h1. Province Select
 
-Simple plugin to select a list of Indonesian provinces.
+Simple plugin to select a list of <strong>Indonesian provinces</strong>.
 This plugin can be integrated with "Formtastic":http://github.com/justinfrench/formtastic/ easily.
 
 h2. Example
 
+Suppose you have @address@ model with @province@ attribute as a string,
 you can use @province_select@ like:
 
 <pre>
   <%- form_for(@address) do |f| -%>
     <p>
-      <%= f.label :province %><br />
+      <%= f.label :province %>
       <%= province_select "address", "province" %>
     </p>
     <p>
