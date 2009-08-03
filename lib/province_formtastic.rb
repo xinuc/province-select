@@ -4,8 +4,6 @@ module Formtastic
     cattr_accessor :priority_provinces
 
     def province_input(method, options)
-      raise "To use the :province input, please install a province_select plugin http://github.com/xinuc/province-select" unless self.respond_to?(:province_select)
-
       html_options = options.delete(:input_html) || {}
       priority_provinces = options.delete(:priority_provinces) || @@priority_provinces
 
